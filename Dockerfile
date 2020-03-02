@@ -1,9 +1,6 @@
-FROM ubuntu:16.04
+FROM python:3
 
 MAINTAINER Your Name "anshupriya.srivastava@duke.edu"
-
-RUN apt-get update -y && \
-    apt-get install -y python-pip python-dev
 
 # We copy just the requirements.txt first to leverage Docker cache
 COPY ./requirements.txt /app/requirements.txt
